@@ -61,73 +61,112 @@ public class MainActivity extends AppCompatActivity implements View {
         presenter.setView(null);
     }
 
-    @OnClick({R.id.btnOne, R.id.btnTwo, R.id.btnThree, R.id.btnFour, R.id.btnFive, R.id.btnSix
-    , R.id.btnSev, R.id.btnEight, R.id.btnNine, R.id.btnZero, R.id.btnLeftParent, R.id.btnRightParent})
+    @OnClick(R.id.btnZero)
     @Override
-    public void writeValues(Button button) {
-        switch(button.getId()) {
-            case R.id.btnOne:
-                inputvalue.setText(inputvalue.getText() + "1");
-                break;
-            case R.id.btnTwo:
-                inputvalue.setText(inputvalue.getText() + "2");
-                break;
-            case R.id.btnThree:
-                inputvalue.setText(inputvalue.getText() + "3");
-                break;
-            case R.id.btnFour:
-                inputvalue.setText(inputvalue.getText() + "4");
-                break;
-            case R.id.btnFive:
-                inputvalue.setText(inputvalue.getText() + "5");
-                break;
-            case R.id.btnSix:
-                inputvalue.setText(inputvalue.getText() + "6");
-                break;
-            case R.id.btnSev:
-                inputvalue.setText(inputvalue.getText() + "7");
-                break;
-            case R.id.btnEight:
-                inputvalue.setText(inputvalue.getText() + "8");
-                break;
-            case R.id.btnNine:
-                inputvalue.setText(inputvalue.getText() + "9");
-                break;
-            case R.id.btnZero:
-                inputvalue.setText(inputvalue.getText() + "0");
-                break;
-            case R.id.btnLeftParent:
-                inputvalue.setText(inputvalue.getText() + "(");
-                break;
-            case R.id.btnRightParent:
-                inputvalue.setText(inputvalue.getText() + ")");
-                break;
-        }
-        }
+    public void writeZero() {
+        inputvalue.setText(inputvalue.getText()+ "0");
+    }
 
-    @OnClick({R.id.btnAdd, R.id.btnSub, R.id.btnDiv, R.id.btnMult, R.id.btnMod, R.id.btnSquare})
+    @OnClick(R.id.btnOne)
     @Override
-    public void writeAlgorithSigns(Button button) {
-        switch(button.getId()) {
-            case R.id.btnAdd:
-                inputvalue.setText(inputvalue.getText() + "+");
-                break;
-            case R.id.btnSub:
-                inputvalue.setText(inputvalue.getText() + "-");
-                break;
-            case R.id.btnDiv:
-                inputvalue.setText(inputvalue.getText() + "/");
-                break;
-            case R.id.btnMult:
-                inputvalue.setText(inputvalue.getText() + "*");
-                break;
-            case R.id.btnMod:
-                inputvalue.setText(inputvalue.getText() + "%");
-                break;
-            case R.id.btnSquare:
-                inputvalue.setText(inputvalue.getText() + "√");
-                break;
-        }
+    public void writeOne() {
+        inputvalue.setText(inputvalue.getText()+ "1");
+    }
+
+    @OnClick(R.id.btnTwo)
+    @Override
+    public void writeTwo() {
+        inputvalue.setText(inputvalue.getText()+ "2");
+    }
+
+    @OnClick(R.id.btnThree)
+    @Override
+    public void writeThree() {
+        inputvalue.setText(inputvalue.getText()+ "3");
+    }
+
+    @OnClick(R.id.btnFour)
+    @Override
+    public void writeFour() {
+        inputvalue.setText(inputvalue.getText()+ "4");
+    }
+
+    @OnClick(R.id.btnFive)
+    @Override
+    public void writeFive() {
+        inputvalue.setText(inputvalue.getText()+ "5");
+    }
+
+    @OnClick(R.id.btnSix)
+    @Override
+    public void writeSix() {
+        inputvalue.setText(inputvalue.getText()+ "6");
+    }
+
+    @OnClick(R.id.btnSev)
+    @Override
+    public void writeSeven() {
+        inputvalue.setText(inputvalue.getText()+ "7");
+    }
+
+    @OnClick(R.id.btnEight)
+    @Override
+    public void writeEight() {
+        inputvalue.setText(inputvalue.getText()+ "8");
+    }
+
+    @OnClick(R.id.btnNine)
+    @Override
+    public void writeNine() {
+        inputvalue.setText(inputvalue.getText()+ "9");
+    }
+
+    @OnClick(R.id.btnAdd)
+    @Override
+    public void writeAdd() {
+        inputvalue.setText(inputvalue.getText()+ "+");
+    }
+
+    @OnClick(R.id.btnSub)
+    @Override
+    public void writeSub() {
+        inputvalue.setText(inputvalue.getText()+ "-");
+    }
+
+    @OnClick(R.id.btnMult)
+    @Override
+    public void writeMult() {
+        inputvalue.setText(inputvalue.getText()+ "*");
+    }
+
+    @OnClick(R.id.btnDiv)
+    @Override
+    public void writeDiv() {
+        inputvalue.setText(inputvalue.getText()+ "/");
+    }
+
+    @OnClick(R.id.btnLeftParent)
+    @Override
+    public void writeLParent() {
+        inputvalue.setText(inputvalue.getText()+ "(");
+    }
+
+    @OnClick(R.id.btnRightParent)
+    @Override
+    public void writeRParent() {
+        inputvalue.setText(inputvalue.getText()+ ")");
+    }
+
+    @OnClick(R.id.btnMod)
+    @Override
+    public void writemod() {
+        inputvalue.setText(inputvalue.getText()+ "%");
+    }
+
+    @OnClick(R.id.btnSquare)
+    @Override
+    public void writeSqrt() {
+        inputvalue.setText(inputvalue.getText()+ "sqrt");
     }
 
     @OnClick(R.id.btnEqual)

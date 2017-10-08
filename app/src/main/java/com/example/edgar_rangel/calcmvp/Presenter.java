@@ -9,5 +9,4 @@ import com.example.edgar_rangel.calcmvp.methods.Calculadora;
 public interface Presenter {
     void setView(View view);
     void setCalcEval(String expression);
-    Calculadora getEvalMethod();
 }

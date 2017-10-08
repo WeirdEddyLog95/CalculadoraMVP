@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity implements View {
         presenter.setView(null);
     }
 
-    @Optional
     @OnClick({R.id.btnOne, R.id.btnTwo, R.id.btnThree, R.id.btnFour, R.id.btnFive, R.id.btnSix
     , R.id.btnSev, R.id.btnEight, R.id.btnNine, R.id.btnZero, R.id.btnLeftParent, R.id.btnRightParent})
     @Override
@@ -105,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements View {
                 break;
         }
         }
-    @Optional
+
     @OnClick({R.id.btnAdd, R.id.btnSub, R.id.btnDiv, R.id.btnMult, R.id.btnMod, R.id.btnSquare})
     @Override
     public void writeAlgorithSigns(Button button) {

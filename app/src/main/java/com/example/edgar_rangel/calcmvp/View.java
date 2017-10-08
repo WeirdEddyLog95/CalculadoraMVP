@@ -10,13 +10,32 @@ import android.widget.Button;
 
 public interface View {
     /*Los metodos para la interfaz visual de la calculadora*/
-    void writeValues(Button button);
-
-    void writeAlgorithSigns(Button button);
-
     void getValues();
 
     void showResult(String result);
 
     void resetValues();
+
+    void writeZero();
+    void writeOne();
+    void writeTwo();
+    void writeThree();
+    void writeFour();
+    void writeFive();
+    void writeSix();
+    void writeSeven();
+    void writeEight();
+    void writeNine();
+
+    void writeAdd();
+    void writeSub();
+    void writeMult();
+    void writeDiv();
+    void writeLParent();
+    void writeRParent();
+    void writemod();
+    void writeSqrt();
+
+
+
 }

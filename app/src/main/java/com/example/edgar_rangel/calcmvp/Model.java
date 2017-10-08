@@ -5,5 +5,5 @@ package com.example.edgar_rangel.calcmvp;
  */
 
 public class Model {
-    
+
 }

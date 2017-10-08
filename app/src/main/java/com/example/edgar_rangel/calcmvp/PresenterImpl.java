@@ -21,11 +21,6 @@ public class PresenterImpl implements Presenter {
     }
 
     @Override
-    public Calculadora getEvalMethod() {
-        return calculadora;
-    }
-
-    @Override
     public void setView(View view) {
         this.view = view;
     }

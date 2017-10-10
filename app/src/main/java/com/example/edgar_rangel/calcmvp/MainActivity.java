@@ -12,7 +12,6 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Optional;
 
 
 public class MainActivity extends AppCompatActivity implements View {
@@ -38,27 +37,17 @@ public class MainActivity extends AppCompatActivity implements View {
     @BindView(R.id.etNum2) EditText inputvalue;
     @BindView(R.id.tvResult) TextView result;
     String expression;
+    PresenterImpl implement;
 
     @Inject
     Presenter presenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.calculator_layout);
         //Area to Make the Binding
         ButterKnife.bind(this);
-    }
-
-    @Override
-    protected void onResume(){
-        super.onResume();
-        presenter.setView(this);
-    }
-
-    @Override
-    protected void onStop(){
-        super.onStop();
-        presenter.setView(null);
     }
 
     @OnClick(R.id.btnZero)
@@ -173,9 +162,13 @@ public class MainActivity extends AppCompatActivity implements View {
     @Override
     public void getValues() {
         try{
+            //get the expression set in edittext
             expression = inputvalue.getText().toString();
-            presenter.setCalcEval(expression);
-        } catch (Exception e){
+            //start to calculate
+            String res = presenter.cal(expression);
+            result.setText(res);
+
+            } catch (Exception e) {
             Toast.makeText(this, "Introduce los datos apropiadamente dentro de la calculadora", Toast.LENGTH_SHORT).show();
         }
 

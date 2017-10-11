@@ -7,6 +7,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.edgar_rangel.calcmvp.di.App;
+
 import javax.inject.Inject;
 
 import butterknife.BindView;
@@ -16,24 +18,6 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements View {
     //Binding de los botones con ButterKnife
-    @BindView(R.id.btnOne) Button btnone;
-    @BindView(R.id.btnTwo) Button btntwo;
-    @BindView(R.id.btnThree) Button btnthree;
-    @BindView(R.id.btnFour) Button btnfour;
-    @BindView(R.id.btnFive) Button btnfive;
-    @BindView(R.id.btnSix) Button btnsix;
-    @BindView(R.id.btnSev) Button btnsev;
-    @BindView(R.id.btnEight) Button btneight;
-    @BindView(R.id.btnNine) Button btnnine;
-    @BindView(R.id.btnZero) Button btnzero;
-    @BindView(R.id.btnAdd) Button btnadd;
-    @BindView(R.id.btnSub) Button btnsub;
-    @BindView(R.id.btnMult) Button btnmult;
-    @BindView(R.id.btnDiv) Button btndiv;
-    @BindView(R.id.btnLeftParent) Button btnleftP;
-    @BindView(R.id.btnRightParent) Button btnrightP;
-    @BindView(R.id.btnMod) Button btnmod;
-    @BindView(R.id.btnSquare) Button btnsqrt;
     @BindView(R.id.etNum2) EditText inputvalue;
     @BindView(R.id.tvResult) TextView result;
     String expression;
@@ -46,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calculator_layout);
+        ((App) getApplication()).getComponent().inject(this);
         //Area to Make the Binding
         ButterKnife.bind(this);
     }
